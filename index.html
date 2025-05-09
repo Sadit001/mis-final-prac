@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Global Explorer | Country Data Search</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1><i class="fas fa-globe-americas"></i> Global Explorer</h1>
+      <p>Discover detailed information about any country worldwide</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="search-section">
+      <div class="search-box">
+        <input type="text" id="search-input" placeholder="Enter Country Name...">
+        <button id="search-btn">
+          <i class="fas fa-search"></i> Search
+        </button>
+      </div>
+      <p class="hint-text">Search by country name (e.g., Canada, Bangladesh)</p>
+    </div>
+
+    <div id="results-container"></div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© <span id="year"></span> Global Explorer | Powered by <a href="https://restcountries.com/" target="_blank">Rest Countries API</a></p>
+      <div class="social-links">
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
