@@ -1,0 +1,244 @@
+:root {
+    --primary: #05c11eaf;
+    --primary-dark: #3a56d4;
+    --secondary: #3f37c9;
+    --text: #2b2d42;
+    --text-light: #8d99ae;
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --error: #ef233c;
+  }
+  
+  /* Base Reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* Header Styles */
+  header {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  header h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  header p {
+    font-weight: 300;
+    opacity: 0.9;
+  }
+  
+  /* Main Content */
+  main {
+    padding: 2rem 0;
+  }
+  
+  .search-section {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .search-box {
+    display: flex;
+    max-width: 600px;
+    margin: 0 auto 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+    overflow: hidden;
+  }
+  
+  #search-input {
+    flex: 1;
+    padding: 1rem 1.5rem;
+    border: none;
+    font-size: 1rem;
+    outline: none;
+  }
+  
+  #search-input::placeholder {
+    color: var(--text-light);
+  }
+  
+  #search-btn {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 0 2rem;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  #search-btn:hover {
+    background-color: var(--primary-dark);
+  }
+  
+  .hint-text {
+    color: var(--text-light);
+    font-size: 0.9rem;
+  }
+  
+  /* Results Container */
+  #results-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    animation: fadeIn 0.5s ease;
+  }
+  
+  .country-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 1.5rem;
+  }
+  
+  .country-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+  }
+  
+  .country-flag {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    aspect-ratio: 16/9;
+    object-fit: cover;
+  }
+  
+  .country-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary);
+  }
+  
+  .country-card p {
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+  }
+  
+  .country-card strong {
+    color: var(--text);
+    font-weight: 500;
+  }
+  
+  /* Error State */
+  .error {
+    text-align: center;
+    color: var(--error);
+    font-weight: 500;
+    padding: 2rem;
+    grid-column: 1 / -1;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: var(--text);
+    color: white;
+    padding: 2rem 0;
+    margin-top: 3rem;
+  }
+  
+  footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  footer p {
+    opacity: 0.8;
+    font-size: 0.9rem;
+  }
+  
+  footer a {
+    color: white;
+    text-decoration: none;
+    transition: opacity 0.3s;
+  }
+  
+  footer a:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+  }
+  
+  .social-links {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .social-links a {
+    font-size: 1.2rem;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    header h1 {
+      font-size: 2rem;
+    }
+  
+    .search-box {
+      flex-direction: column;
+      border-radius: 12px;
+    }
+  
+    #search-input, #search-btn {
+      width: 100%;
+      padding: 1rem;
+    }
+  
+    #search-btn {
+      justify-content: center;
+    }
+  }
+
+
+  
+  #results-container {
+    display: grid;
+    grid-template-columns: minmax(300px, 400px); /* Single centered column */
+    justify-content: center; /* Center the grid */
+    gap: 2rem;
+    animation: fadeIn 0.5s ease;
+    margin: 0 auto;
+    padding: 20px;
+  }
