@@ -9,7 +9,7 @@
     --error: #ef233c;
   }
   
-  /* Base Reset */
+  
   * {
     margin: 0;
     padding: 0;
@@ -30,7 +30,7 @@
     padding: 0 20px;
   }
   
-  /* Header Styles */
+ 
   header {
     background: linear-gradient(135deg, var(--primary), var(--secondary));
     color: white;
@@ -54,7 +54,7 @@
     opacity: 0.9;
   }
   
-  /* Main Content */
+  
   main {
     padding: 2rem 0;
   }
@@ -107,7 +107,7 @@
     font-size: 0.9rem;
   }
   
-  /* Results Container */
+  
   #results-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -155,7 +155,7 @@
     font-weight: 500;
   }
   
-  /* Error State */
+  
   .error {
     text-align: center;
     color: var(--error);
@@ -164,7 +164,7 @@
     grid-column: 1 / -1;
   }
   
-  /* Footer */
+  
   footer {
     background-color: var(--text);
     color: white;
@@ -204,13 +204,13 @@
     font-size: 1.2rem;
   }
   
-  /* Animations */
+  
   @keyframes fadeIn {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
   }
   
-  /* Responsive Adjustments */
+  
   @media (max-width: 768px) {
     header h1 {
       font-size: 2rem;
@@ -235,8 +235,8 @@
   
   #results-container {
     display: grid;
-    grid-template-columns: minmax(300px, 400px); /* Single centered column */
-    justify-content: center; /* Center the grid */
+    grid-template-columns: minmax(300px, 400px); 
+    justify-content: center; 
     gap: 2rem;
     animation: fadeIn 0.5s ease;
     margin: 0 auto;
